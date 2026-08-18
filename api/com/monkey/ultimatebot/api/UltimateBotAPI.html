@@ -173,6 +173,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns the registered API singleton when available.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.monkey.ultimatebot.common.model.PlatformInfo</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatform()" class="member-name-link">getPlatform</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the loaded Minecraft version and NMS feature flags for this server.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;com.monkey.ultimatebot.common.model.PlatformCapability&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlatformCapabilities()" class="member-name-link">getPlatformCapabilities</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the NMS feature flags of the loaded server bridge.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.bukkit.plugin.Plugin</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlugin()" class="member-name-link">getPlugin</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -188,9 +198,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Registers the global API singleton.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#unregister()" class="member-name-link">unregister</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#supports(com.monkey.ultimatebot.common.model.PlatformCapability)" class="member-name-link">supports</a><wbr>(com.monkey.ultimatebot.common.model.PlatformCapability&nbsp;capability)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether the loaded NMS bridge exposes the given platform feature.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#unregister()" class="member-name-link">unregister</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Unregisters the global API singleton.</div>
 </div>
 </div>
@@ -351,6 +366,27 @@ loadScripts(document, 'script');</script>
 <h3>getAddons</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="addon/AddonRegistry.html" title="interface in com.monkey.ultimatebot.api.addon">AddonRegistry</a></span>&nbsp;<span class="element-name">getAddons</span>()</div>
 <div class="block">Returns the read-only status of jars managed by the addon engine.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatform()">
+<h3>getPlatform</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.monkey.ultimatebot.common.model.PlatformInfo</span>&nbsp;<span class="element-name">getPlatform</span>()</div>
+<div class="block">Returns the loaded Minecraft version and NMS feature flags for this server.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlatformCapabilities()">
+<h3>getPlatformCapabilities</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;com.monkey.ultimatebot.common.model.PlatformCapability&gt;</span>&nbsp;<span class="element-name">getPlatformCapabilities</span>()</div>
+<div class="block">Returns the NMS feature flags of the loaded server bridge.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="supports(com.monkey.ultimatebot.common.model.PlatformCapability)">
+<h3>supports</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">supports</span><wbr><span class="parameters">(com.monkey.ultimatebot.common.model.PlatformCapability&nbsp;capability)</span></div>
+<div class="block">Returns whether the loaded NMS bridge exposes the given platform feature.</div>
 </section>
 </li>
 </ul>

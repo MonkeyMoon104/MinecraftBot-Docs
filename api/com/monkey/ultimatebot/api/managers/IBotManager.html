@@ -126,7 +126,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#findTeamAllyPrimaryOwner(java.util.UUID)" class="member-name-link">findTeamAllyPrimaryOwner</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;teamOwnerUUID)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Resolves the primary owner UUID used internally for a TEAM_ALLY bot.</div>
+<div class="block">Resolves the primary owner UUID for a TEAM_ALLY bot.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getActiveBotCount()" class="member-name-link">getActiveBotCount</a>()</code></div>
@@ -156,94 +156,104 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;com.monkey.ultimatebot.common.model.CombatModeDefinition&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCombatMode(com.monkey.ultimatebot.common.model.CombatMode)" class="member-name-link">getCombatMode</a><wbr>(com.monkey.ultimatebot.common.model.CombatMode&nbsp;combatMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Returns the complete server definition for one combat mode.</div>
+<div class="block">Returns the complete server definition for one combat mode when supported.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;com.monkey.ultimatebot.common.model.CombatModeDefinition&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCombatModes()" class="member-name-link">getCombatModes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Returns every configured combat mode, including disabled modes.</div>
+<div class="block">Returns configured combat modes supported by this server platform (omits unsupported).</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="../model/runtime/BotSnapshot.html" title="class in com.monkey.ultimatebot.api.model.runtime">BotSnapshot</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTeamAllyBot(java.util.UUID)" class="member-name-link">getTeamAllyBot</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;teamOwnerUUID)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.monkey.ultimatebot.common.model.PlatformInfo</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPlatform()" class="member-name-link">getPlatform</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the loaded Minecraft version and NMS feature flags for this server.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="../model/runtime/BotSnapshot.html" title="class in com.monkey.ultimatebot.api.model.runtime">BotSnapshot</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTeamAllyBot(java.util.UUID)" class="member-name-link">getTeamAllyBot</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;teamOwnerUUID)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the TEAM_ALLY bot snapshot associated with a team owner UUID.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isBotSpawned(java.util.UUID)" class="member-name-link">isBotSpawned</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isBotSpawned(java.util.UUID)" class="member-name-link">isBotSpawned</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Checks whether a bot is currently active for the given owner.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#parsePlayerReference(java.lang.String)" class="member-name-link">parsePlayerReference</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;playerReference)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#parsePlayerReference(java.lang.String)" class="member-name-link">parsePlayerReference</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;playerReference)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Parses a single player reference into an online UUID.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#parsePlayerReferences(java.util.Collection)" class="member-name-link">parsePlayerReferences</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;playerReferences)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#parsePlayerReferences(java.util.Collection)" class="member-name-link">parsePlayerReferences</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;playerReferences)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Parses a collection of player references into UUID mappings.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#remove(java.util.UUID)" class="member-name-link">remove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#remove(java.util.UUID)" class="member-name-link">remove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Removes/despawns the bot associated with the given owner.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeAll()" class="member-name-link">removeAll</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeAll()" class="member-name-link">removeAll</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Removes all currently active bots and returns how many were tracked before cleanup.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeByBotUUID(java.util.UUID)" class="member-name-link">removeByBotUUID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;botUUID)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeBySource(com.monkey.ultimatebot.common.model.BotSource)" class="member-name-link">removeBySource</a><wbr>(com.monkey.ultimatebot.common.model.BotSource&nbsp;source)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeByBotUUID(java.util.UUID)" class="member-name-link">removeByBotUUID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;botUUID)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeBySource(com.monkey.ultimatebot.common.model.BotSource)" class="member-name-link">removeBySource</a><wbr>(com.monkey.ultimatebot.common.model.BotSource&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Removes all active bots created from the given source.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resetBrain(java.util.UUID)" class="member-name-link">resetBrain</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resetBrain(java.util.UUID)" class="member-name-link">resetBrain</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Restores the brain declared by the selected combat mode, or the built-in brain.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resetBrainByBotUUID(java.util.UUID)" class="member-name-link">resetBrainByBotUUID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;botUUID)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resetBrainByBotUUID(java.util.UUID)" class="member-name-link">resetBrainByBotUUID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;botUUID)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Restores the default brain using the runtime bot UUID.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resetCombatTuning(java.util.UUID)" class="member-name-link">resetCombatTuning</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resetCombatTuning(java.util.UUID)" class="member-name-link">resetCombatTuning</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Restores server tuning for the bot's current combat mode and difficulty.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resetCombatTuningByBotUUID(java.util.UUID)" class="member-name-link">resetCombatTuningByBotUUID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;botUUID)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resetCombatTuningByBotUUID(java.util.UUID)" class="member-name-link">resetCombatTuningByBotUUID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;botUUID)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Restores server tuning using the runtime bot UUID.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../model/runtime/BotOperationResult.html" title="class in com.monkey.ultimatebot.api.model.runtime">BotOperationResult</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#spawn(com.monkey.ultimatebot.api.model.runtime.BotSpawnRequest)" class="member-name-link">spawn</a><wbr>(<a href="../model/runtime/BotSpawnRequest.html" title="class in com.monkey.ultimatebot.api.model.runtime">BotSpawnRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../model/runtime/BotOperationResult.html" title="class in com.monkey.ultimatebot.api.model.runtime">BotOperationResult</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#spawn(com.monkey.ultimatebot.api.model.runtime.BotSpawnRequest)" class="member-name-link">spawn</a><wbr>(<a href="../model/runtime/BotSpawnRequest.html" title="class in com.monkey.ultimatebot.api.model.runtime">BotSpawnRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Spawns a bot using a fully structured spawn request.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../model/runtime/BotOperationResult.html" title="class in com.monkey.ultimatebot.api.model.runtime">BotOperationResult</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#spawnByReferences(com.monkey.ultimatebot.common.model.BotMode,java.lang.String,java.util.Collection,java.util.Collection,com.monkey.ultimatebot.api.model.configuration.BotSettings)" class="member-name-link">spawnByReferences</a><wbr>(com.monkey.ultimatebot.common.model.BotMode&nbsp;mode,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../model/runtime/BotOperationResult.html" title="class in com.monkey.ultimatebot.api.model.runtime">BotOperationResult</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#spawnByReferences(com.monkey.ultimatebot.common.model.BotMode,java.lang.String,java.util.Collection,java.util.Collection,com.monkey.ultimatebot.api.model.configuration.BotSettings)" class="member-name-link">spawnByReferences</a><wbr>(com.monkey.ultimatebot.common.model.BotMode&nbsp;mode,
  @Nullable <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;ownerReference,
  @Nullable <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;targetReferences,
  @Nullable <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;teamOwnerReferences,
  @Nullable <a href="../model/configuration/BotSettings.html" title="class in com.monkey.ultimatebot.api.model.configuration">BotSettings</a>&nbsp;settings)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Spawns a bot by parsing player references (name/UUID strings).</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#supports(com.monkey.ultimatebot.common.model.PlatformCapability)" class="member-name-link">supports</a><wbr>(com.monkey.ultimatebot.common.model.PlatformCapability&nbsp;capability)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns whether the loaded NMS bridge exposes the given platform feature.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updateArmor(java.util.UUID,java.util.Map,java.util.Map)" class="member-name-link">updateArmor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;org.bukkit.inventory.EquipmentSlot,<wbr>org.bukkit.inventory.ItemStack&gt;&nbsp;armor,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;org.bukkit.inventory.EquipmentSlot,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;blastProtection)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;com.monkey.ultimatebot.common.model.EquipmentSlotKind,<wbr>org.bukkit.inventory.ItemStack&gt;&nbsp;armor,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;com.monkey.ultimatebot.common.model.EquipmentSlotKind,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;blastProtection)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updateArmorByBotUUID(java.util.UUID,java.util.Map,java.util.Map)" class="member-name-link">updateArmorByBotUUID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;botUUID,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;org.bukkit.inventory.EquipmentSlot,<wbr>org.bukkit.inventory.ItemStack&gt;&nbsp;armor,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;org.bukkit.inventory.EquipmentSlot,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;blastProtection)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;com.monkey.ultimatebot.common.model.EquipmentSlotKind,<wbr>org.bukkit.inventory.ItemStack&gt;&nbsp;armor,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;com.monkey.ultimatebot.common.model.EquipmentSlotKind,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;blastProtection)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Replaces armor contents using the runtime bot UUID.</div>
 </div>
@@ -557,10 +567,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="isBotSpawned(java.util.UUID)">
 <h3>isBotSpawned</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isBotSpawned</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID)</span></div>
-<div class="block">Checks whether a bot is currently active for the given owner.
-
- <p>For TEAM_ALLY bots, implementations may also return <code>true</code> for team members
- mapped to the same shared bot.</p></div>
+<div class="block">Checks whether a bot is currently active for the given owner.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>ownerUUID</code> - owner UUID to check</dd>
@@ -590,17 +597,31 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getPlatform()">
+<h3>getPlatform</h3>
+<div class="member-signature"><span class="return-type">com.monkey.ultimatebot.common.model.PlatformInfo</span>&nbsp;<span class="element-name">getPlatform</span>()</div>
+<div class="block">Returns the loaded Minecraft version and NMS feature flags for this server.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="supports(com.monkey.ultimatebot.common.model.PlatformCapability)">
+<h3>supports</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">supports</span><wbr><span class="parameters">(com.monkey.ultimatebot.common.model.PlatformCapability&nbsp;capability)</span></div>
+<div class="block">Returns whether the loaded NMS bridge exposes the given platform feature.</div>
+</section>
+</li>
+<li>
 <section class="detail" id="getCombatModes()">
 <h3>getCombatModes</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.monkey.ultimatebot.common.model.CombatModeDefinition&gt;</span>&nbsp;<span class="element-name">getCombatModes</span>()</div>
-<div class="block">Returns every configured combat mode, including disabled modes.</div>
+<div class="block">Returns configured combat modes supported by this server platform (omits unsupported).</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCombatMode(com.monkey.ultimatebot.common.model.CombatMode)">
 <h3>getCombatMode</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;com.monkey.ultimatebot.common.model.CombatModeDefinition&gt;</span>&nbsp;<span class="element-name">getCombatMode</span><wbr><span class="parameters">(com.monkey.ultimatebot.common.model.CombatMode&nbsp;combatMode)</span></div>
-<div class="block">Returns the complete server definition for one combat mode.</div>
+<div class="block">Returns the complete server definition for one combat mode when supported.</div>
 </section>
 </li>
 <li>
@@ -634,7 +655,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="findTeamAllyPrimaryOwner(java.util.UUID)">
 <h3>findTeamAllyPrimaryOwner</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;</span>&nbsp;<span class="element-name">findTeamAllyPrimaryOwner</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;teamOwnerUUID)</span></div>
-<div class="block">Resolves the primary owner UUID used internally for a TEAM_ALLY bot.</div>
+<div class="block">Resolves the primary owner UUID for a TEAM_ALLY bot.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>teamOwnerUUID</code> - one team member UUID</dd>
@@ -676,7 +697,7 @@ loadScripts(document, 'script');</script>
 <dd><code>ownerReference</code> - owner reference (name or UUID string), may be null for TEAM_ALLY</dd>
 <dd><code>targetReferences</code> - target references (name or UUID strings), may be null</dd>
 <dd><code>teamOwnerReferences</code> - team owner references for TEAM_ALLY, may be null</dd>
-<dd><code>settings</code> - spawn settings; when null, implementation-defined defaults may be used</dd>
+<dd><code>settings</code> - spawn settings</dd>
 <dt>Returns:</dt>
 <dd>operation result with success flag and details</dd>
 </dl>
@@ -686,10 +707,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="parsePlayerReference(java.lang.String)">
 <h3>parsePlayerReference</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;</span>&nbsp;<span class="element-name">parsePlayerReference</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;playerReference)</span></div>
-<div class="block">Parses a single player reference into an online UUID.
-
- <p>Implementations commonly support exact name, fuzzy name and UUID string parsing,
- but usually resolve only online players.</p></div>
+<div class="block">Parses a single player reference into an online UUID.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>playerReference</code> - player name or UUID string</dd>
@@ -767,9 +785,7 @@ loadScripts(document, 'script');</script>
 <h3>updateCombat</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">updateCombat</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID,
  boolean&nbsp;combat)</span></div>
-<div class="block">Updates combat behavior for a managed bot.
-
- <p>Implementations typically enforce <code>combat=true</code> only when follow is enabled.</p></div>
+<div class="block">Updates combat behavior for a managed bot.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>ownerUUID</code> - owner UUID</dd>
@@ -929,8 +945,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="updateArmor(java.util.UUID,java.util.Map,java.util.Map)">
 <h3>updateArmor</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">updateArmor</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;ownerUUID,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;org.bukkit.inventory.EquipmentSlot,<wbr>org.bukkit.inventory.ItemStack&gt;&nbsp;armor,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;org.bukkit.inventory.EquipmentSlot,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;blastProtection)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;com.monkey.ultimatebot.common.model.EquipmentSlotKind,<wbr>org.bukkit.inventory.ItemStack&gt;&nbsp;armor,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;com.monkey.ultimatebot.common.model.EquipmentSlotKind,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;blastProtection)</span></div>
 </section>
 </li>
 <li>
@@ -953,8 +969,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="updateArmorByBotUUID(java.util.UUID,java.util.Map,java.util.Map)">
 <h3>updateArmorByBotUUID</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">updateArmorByBotUUID</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;botUUID,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;org.bukkit.inventory.EquipmentSlot,<wbr>org.bukkit.inventory.ItemStack&gt;&nbsp;armor,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;org.bukkit.inventory.EquipmentSlot,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;blastProtection)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;com.monkey.ultimatebot.common.model.EquipmentSlotKind,<wbr>org.bukkit.inventory.ItemStack&gt;&nbsp;armor,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;com.monkey.ultimatebot.common.model.EquipmentSlotKind,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;blastProtection)</span></div>
 <div class="block">Replaces armor contents using the runtime bot UUID.</div>
 </section>
 </li>
