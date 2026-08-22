@@ -1,6 +1,15 @@
 com.monkey.ultimatebot.common.addon
 com.monkey.ultimatebot.common.guard
+com.monkey.ultimatebot.common.lib
+com.monkey.ultimatebot.common.lib.classpath
+com.monkey.ultimatebot.common.lib.download
+com.monkey.ultimatebot.common.lib.model
+com.monkey.ultimatebot.common.lib.relocate
 com.monkey.ultimatebot.common.metrics
-com.monkey.ultimatebot.common.model
+com.monkey.ultimatebot.common.model.bot
+com.monkey.ultimatebot.common.model.brain
+com.monkey.ultimatebot.common.model.combat
+com.monkey.ultimatebot.common.model.platform
+com.monkey.ultimatebot.common.model.settings
 com.monkey.ultimatebot.common.net
 com.monkey.ultimatebot.common.util
